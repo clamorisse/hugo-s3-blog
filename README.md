@@ -46,9 +46,9 @@ Then run terraform plan and see tests passing. You can run them manually with `r
 
 ```
 cd terraform
-terraform taint null_resource.infra-tests -var-file=vars.tfvars
-terraform plan -var-file=vars.tfvars
-terraform apply -var-file=vars.tfvars
+terraform taint null_resource.infra-tests 
+terraform plan 
+terraform apply 
 ```
 
 You should see terraform ideally has no changes to apply, then recreates 'null resource' and runs tests.
