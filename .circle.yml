@@ -5,9 +5,10 @@ machine:
     - docker
 
 dependencies:
-  override:
+  pre:
+    - ls -al
     - docker info
-    - docker build -t bvcotero/hugo .
+    - docker build -t bvcotero/hugo ./docker-hugo-blog
 
 test:
   post:
