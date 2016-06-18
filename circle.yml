@@ -12,6 +12,5 @@ dependencies:
 
 test:
   post:
-    - docker run -d -it  -p 1313:1313 -v $(pwd):/root/hugo bvcotero/hugo
-  sleep 10
+    - docker run -d -it  -p 1313:1313 -v $(pwd):/root/hugo bvcotero/hugo; sleep 5
     - curl --retry 2 --retry-delay 5 -v http://localhost:1313
