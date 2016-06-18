@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/clamorisse/hugo-s3-blog/tree/master.svg?style=svg)](https://circleci.com/gh/clamorisse/hugo-s3-blog/tree/master)
+
 # Hugo container generated blog in AWS S3
 
 This repository is used to manage a static blog generated with hugo and published in S3.
