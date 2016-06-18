@@ -22,5 +22,7 @@ deployment:
   prod:
     branch: add-circle-ci
     commands:
+      - aws s3 ls
+      - ls -al ~/.aws
       - aws s3 sync content-hugo-blog/public/ s3://clamorisse-blog/
     
