@@ -19,6 +19,6 @@ test:
     - if [  "$(ls -A content-hugo-blog/public)" ]; then echo "generated public dir"; else exit 5; fi
     
 deployment:
-  command:
+  commands:
     - aws s3 sync content-hugo-blog/public/ s3://clamorisse-blog/
     
