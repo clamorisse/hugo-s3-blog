@@ -20,7 +20,7 @@ test:
     
 deployment:
   prod:
-    branch: add-circle-ci
+    branch: master
     commands:
       - aws s3 ls
       - ls -al ~/.aws
