@@ -9,8 +9,17 @@ dependencies:
     - ls -al
     - docker info
     - docker build -t bvcotero/hugo ./docker-hugo-blog
+  override:
+    - docker run --rm -it  -p 1313:1313 -v $(pwd)/content-hugo-blog/:/root/hugo bvcotero/hugo  hugo
+    
 
 test:
   post:
     - docker run -d -it  -p 1313:1313 -v $(pwd)/content-hugo-blog:/root/hugo bvcotero/hugo hugo server --watch --bind 0.0.0.0; sleep 5
     - curl --retry 2 --retry-delay 5 -v http://localhost:1313
+    - if [  "$(ls -A content-hugo-blog/public)" ]; then echo "generated public dir"; else exit 5; fi
+    
+    
+#deployment:
+#  command:
+    
