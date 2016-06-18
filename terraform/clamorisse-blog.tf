@@ -53,8 +53,19 @@ resource "aws_iam_user_policy" "blog-s3-deployment-policy" {
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Effect": "Allow",
       "Action": [
-         "s3:PutObject" 
+        "s3:GetBucketLocation",
+        "s3:ListAllMyBuckets"
+      ],
+      "Resource": "arn:aws:s3:::*"
+    },
+    {
+      "Action": [
+         "s3:PutObject",
+         "s3:ListBucket",
+         "s3:ListObject",
+         "s3:GetObject",
       ],
       "Effect": "Allow",
       "Resource": "arn:aws:s3:::${var.bucket-name}" 
