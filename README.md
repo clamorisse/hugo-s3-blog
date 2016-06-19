@@ -4,6 +4,8 @@
 
 This repository is used to manage a static blog generated with hugo and published in S3.
 
+Its deployment is tested and automated using cirlceCI (infrastructure generated in terraform is not included), using config.yml file in this repository. The instructions below are to manage this repository manually.
+
 Also, contains terraform and other supporting code to manage infrastructure.
 
 The tools used are: terraform, rspec, docker, gohugo and amazon cli.
@@ -57,26 +59,26 @@ You should see terraform ideally has no changes to apply, then recreates 'null r
 
 ## Building docker gohugo image
 
-To build image, run following command in the `gohugo-docker`:
+To build image, run following command in the `docker-hugo-blog`:
 
 ```
-docker build -t bvcotero/hugo .
+docker build -t clamorisse/hugo:0.14 .
 ```
 
 ## Website: development and publishing
 
 To work with the site content, cd to the folder
 
-For development, please run docker with these options in the `gohugo-content/clamorisse-blog` folder:
+For development, please run docker with these options in the `hugo-site-s3/content-hugo-blog` folder:
 
 ```
-docker run --rm -it  -p 1313:1313 -v $(pwd):/root/hugo bvcotero/hugo  hugo server --watch --baseUrl=http://docker-ip-default:1313 --bind 0.0.0.0
+docker run --rm -it  -p 1313:1313 -v ~/devopsing/hugo-site-s3/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.14  hugo server --watch --baseUrl=http://docker-default-ip:1313 --bind 0.0.0.0
 ```
 
 To publish changes (it should be done automatically by a build/deployment server), run this commands:
 
 ```
-cd gohugo-content/clamorisse-blog
-docker run --rm -it  -p 1313:1313 -v $(pwd):/root/hugo bvcotero/hugo  hugo
-aws s3 sync public/ s3://clamorisse-blog/
+cd hugo-site-s3/content-hugo-blog
+docker run --rm -it  -p 1313:1313 -v $(PWD)/:/usr/src/blog clamorisse/hugo:0.14 hugo
+aws s3 sync public/ s3://your-bucket-name/
 ```

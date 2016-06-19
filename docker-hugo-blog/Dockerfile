@@ -1,26 +1,18 @@
-FROM ubuntu:14.04
+FROM ubuntu:14.04 
 
-MAINTAINER Berenice Cotero <bvcotero@gmail.com>
+MAINTAINER Berenice Venegas Cotero <bvcotero@gmail.com>
 
-# Install wget
-RUN apt-get update 
-RUN apt-get install -y wget git
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y curl tar
 
-# Install go tarball
-ENV GOLANG_VERSION 1.5.1
-RUN wget -qO- http://golang.org/dl/go${GOLANG_VERSION}.linux-amd64.tar.gz | tar -C /usr/local -xzf -
+ENV HUGO_VERSION 0.14
+RUN curl -sSL https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux_amd64.tar.gz | tar -v -C /usr/local/bin -xz --strip-components 1 \
+	&& mv /usr/local/bin/hugo_${HUGO_VERSION}_linux_amd64 /usr/local/bin/hugo
 
-# Set user
-ENV HOME /root
-ENV GOPATH ${HOME}/go
-ENV PATH ${PATH}:${GOPATH}/bin:/usr/local/go/bin
-RUN touch ${HOME}/.zshrc
-WORKDIR ${HOME}
+ENV HOME /usr/src
+VOLUME ${HOME}/blog/
+WORKDIR ${HOME}/blog/
 
-# Install Hugo
-RUN go get -u -v github.com/spf13/hugo
-EXPOSE 1313
+EXPOSE 1313 
 
-VOLUME ${HOME}/hugo
-WORKDIR ${HOME}/hugo
+#ENTRYPOINT ["./release.sh"]
+#CMD ["hugo"]
