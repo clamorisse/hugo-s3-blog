@@ -1,10 +1,10 @@
 baseurl      = "http://clamorisse-blog.s3-website-us-east-1.amazonaws.com/"
 languageCode = "en-us"
-title        = "Colette's garage"
+title        = "La BVC de Ensenada"
 theme        = "angels-ladder"
 
 [Params]
-subtitle     = "Because all interesting things start in the garage!"
+subtitle     = "Informando desde Philadelphia"
 facebook     = "https://www.facebook.com/clamorisse"
 twitter      = "https://twitter.com/clamorisse"
 github       = "https://github.com/clamorisse"
