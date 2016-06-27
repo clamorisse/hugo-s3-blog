@@ -1,0 +1,3 @@
+[submodule "content-hugo-blog/themes/angels-ladder"]
+	path = content-hugo-blog/themes/angels-ladder
+	url = https://github.com/tanksuzuki/angels-ladder
