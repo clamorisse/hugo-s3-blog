@@ -1,4 +1,4 @@
-gohugo-content/clamorisse-blog/public
+content-hugo-blog/public/
 **/terraform/terraform.tfstate*
 **/.DS_Store
 **/Gemfile.lock

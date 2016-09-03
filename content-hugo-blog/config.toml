@@ -1,10 +1,10 @@
 baseurl      = "http://clamorisse-blog.s3-website-us-east-1.amazonaws.com/"
 languageCode = "en-us"
-title        = "La BVC de Ensenada"
+title        = "Berenice's Blog"
 theme        = "angels-ladder"
 
 [Params]
-subtitle     = "Informando desde Philadelphia"
+subtitle     = "Life, art and IT"
 facebook     = "https://www.facebook.com/clamorisse"
 twitter      = "https://twitter.com/clamorisse"
 github       = "https://github.com/clamorisse"
