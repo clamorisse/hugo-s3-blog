@@ -1,6 +1,6 @@
 baseurl      = "http://clamorisse-blog.s3-website-us-east-1.amazonaws.com/"
 languageCode = "en-us"
-title        = "Berenice's Blog"
+title        = "Berenicita's Blog"
 theme        = "angels-ladder"
 
 [Params]
