@@ -1,3 +1,4 @@
+content-hugo-blog/themes/
 content-hugo-blog/public/
 **/terraform/terraform.tfstate*
 **/.DS_Store
