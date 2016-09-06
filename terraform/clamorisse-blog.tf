@@ -6,7 +6,7 @@ variable "env"                 { }
 # Provider defaults settings
 provider "aws" {
   region = "${var.aws-region}"
-  profile = "default"
+  profile = "${var.profile-name}"
 }
 
 resource "aws_s3_bucket" "blog-bucket" {
