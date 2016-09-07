@@ -29,4 +29,4 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync content-hugo-blog/public/ s3://clamorisse-blog/
+      - aws s3 sync content-hugo-blog/public/ s3://blog.cotero.org/
