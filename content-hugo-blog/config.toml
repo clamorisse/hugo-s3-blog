@@ -1,4 +1,5 @@
 baseurl      = "http://blog.cotero.org/"
+canonifyurls = true
 languageCode = "en-us"
 title        = "Berenice's Blog"
 theme        = "angels-ladder"
