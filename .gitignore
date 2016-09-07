@@ -1,4 +1,4 @@
-content-hugo-blog/themes/
+content-hugo-blog/themes/*
 content-hugo-blog/public/
 **/terraform/tfstate-bucket/terraform.tfstate*
 **/terraform/terraform.tfstate*
