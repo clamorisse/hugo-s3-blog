@@ -1,13 +1,14 @@
-variable "aws-region"          { }
+# -----------------------------------------------
+#       GLOBAL INFRASTRUCTURE FOR BLOG
+#                 HOSTED IN S3
+# ----------------------------------------------
+
+
 variable "application-name"    { }
 variable "bucket-name"         { }
 variable "env"                 { }
 
-# Provider defaults settings
-provider "aws" {
-  region = "${var.aws-region}"
-  profile = "default"
-}
+# CREATE BUCKET IN S3
 
 resource "aws_s3_bucket" "blog-bucket" {
     bucket = "${var.bucket-name}"
@@ -39,10 +40,12 @@ EOF
     }
 }
 
+# CREATE USER TO DEPLOY BLOG
+
 module "iam-user" {
   source = "github.com/clamorisse/modular-terraform-automation//modules/iam/users"
 
-  user_names = "${var.application-name}-deployuser-${var.env}"
+  user_names = "${var.application-name}-user-${var.env}"
 }
 
 resource "aws_iam_user_policy" "blog-s3-deployment-policy" {
