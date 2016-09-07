@@ -1,8 +1,10 @@
 content-hugo-blog/themes/
 content-hugo-blog/public/
+**/terraform/tfstate-bucket/terraform.tfstate*
 **/terraform/terraform.tfstate*
 **/.DS_Store
 **/Gemfile.lock
+terraform/tfstate-bucket/.terraform
 terraform/.terraform
 **/*.swp
 **/.terraform

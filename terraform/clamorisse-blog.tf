@@ -45,7 +45,7 @@ EOF
 module "iam-user" {
   source = "github.com/clamorisse/modular-terraform-automation//modules/iam/users"
 
-  user_names = "${var.application-name}-deployuser-${var.env}"
+  user_names = "${var.application-name}-user-${var.env}"
 }
 
 resource "aws_iam_user_policy" "blog-s3-deployment-policy" {
