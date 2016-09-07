@@ -16,7 +16,8 @@ dependencies:
     - docker build -t clamorisse/hugo:0.14 ./docker-hugo-blog
   override:
     - docker run -d -it --name hugotest -v $(pwd)/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.14 hugo server --baseUrl=http://blog.cotero.org/
-    - docker stop hugotest && docker rm hugotest
+    - docker stop hugotest
+    - docker rm hugotest
     - cat $(pwd)/content-hugo-blog/public/index.html
 
 test:
