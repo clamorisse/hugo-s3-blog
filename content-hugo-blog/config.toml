@@ -1,4 +1,4 @@
-baseurl      = "http://clamorisse-blog.s3-website-us-east-1.amazonaws.com/"
+baseurl      = "http://blog.cotero.org/"
 languageCode = "en-us"
 title        = "Berenice's Blog"
 theme        = "angels-ladder"
