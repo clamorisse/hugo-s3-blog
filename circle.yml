@@ -30,7 +30,3 @@ deployment:
     branch: master
     commands:
       - aws s3 sync content-hugo-blog/public/ s3://blog.cotero.org/
-  staging:
-    branch: stage-tf
-    commands:
-      -aws s3 sync content-hugo-blog/public/ s3://blog-stage.cotero.org/
