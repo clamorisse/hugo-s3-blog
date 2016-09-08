@@ -6,10 +6,12 @@
 echo "Reading and Exporting environmental variables"
 echo " "
 
+path=$PWD
+
 # Extract bootstrap bucket from tfstate output
-cd tfstate-bucket # Bootstrap folder to create bucket for remote tfstate
+cd ../tfstate-bucket # Bootstrap folder to create bucket for remote tfstate
 bucket=$(terraform output | awk '{print$3}')
-cd ..
+cd $path 
 
 # Extracting variables from tfvars file
  
