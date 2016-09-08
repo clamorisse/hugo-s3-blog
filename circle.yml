@@ -24,7 +24,8 @@ test:
     - docker logs hugotest
     - if [  "$(ls -A content-hugo-blog/public)" ]; then echo "generated public dir"; else exit 5; fi
     - cat $(pwd)/content-hugo-blog/public/index.html
-    - if [ "$(sed -n '/Blog/ {/h1/ p; }' content-hugo-blog/public/index.html | awk '{print$2}' | grep -o '".*"' | sed 's/"//g')" == "http://blog.cotero.org/"]; then echo "baseURL is good"; else exit 5; fi
+    - burl=sed -n '/Blog/ {/h1/ p; }' content-hugo-blog/public/index.html | awk '{print$2}' | grep -o '".*"' | sed 's/"//g'
+    - if [ "$(burl)" == "http://blog.cotero.org/"]; then echo "baseURL is good"; else exit 5; fi
     
     
 deployment:
