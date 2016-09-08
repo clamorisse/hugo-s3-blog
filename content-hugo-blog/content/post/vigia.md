@@ -1,7 +1,7 @@
 +++
 date  = "2016-09-06T13:48:40Z"
 draft = false
-title = "EL vigia Memoir"
+title = "EL Vigia Memoir"
 image = "pelican.jpg"
 
 +++
