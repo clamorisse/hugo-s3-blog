@@ -26,11 +26,11 @@ test:
     - cat $(pwd)/content-hugo-blog/public/index.html
     
 deployment:
-  prod:
+  production:
     branch: master
     commands:
       - aws s3 sync content-hugo-blog/public/ s3://blog.cotero.org/
-  stage:
+  staging:
     branch: stage-tf
     commands:
-      -aws s3 sync content-hugo-blog/public/ s3://blog-stage.cotero.org/
+      - aws s3 sync content-hugo-blog/public/ s3://blog-stage.cotero.org/
