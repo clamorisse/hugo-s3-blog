@@ -1,19 +1,14 @@
 # ---------------------------------------------------
-#         VARIABLES FOR ALL .TF FILES
+#               GLOBAL  VARIABLES
 # ---------------------------------------------------
 
 # AWS CONFIGURATION VARIABLES
 
 aws-region           = "us-east-1"
 profile-name         = "roman-bvc-admin"
-
-# TERRAFORM REMOTE STATE CONFIGURATION VARIABLES
-
-tfstate-bucket       = "tfstate_blog_infra"
 object-name          = "terraform.tfstate"
+application-name     = "blog-cotero" 
+env                  = "global"
 
-// app specific variables for production - be careful
-
-application-name    = "blog-cotero" 
-bucket-name         = "blog.cotero.org"
-env                 = "prod" 
+bucket-prod          = "blog.cotero.org"
+bucket-stage         = "blog-stage.cotero.org"
