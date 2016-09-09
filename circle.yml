@@ -23,6 +23,7 @@ test:
     - docker logs hugotest
     - if [  "$(ls -A content-hugo-blog/public)" ]; then echo "generated public dir"; else exit 5; fi
     - cat $(pwd)/content-hugo-blog/public/index.html
+    - docker stop hugotest
     
 deployment:
   production:
