@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/clamorisse/hugo-s3-blog/tree/master.svg?style=svg)](https://circleci.com/gh/clamorisse/hugo-s3-blog/tree/master)
+[![CircleCI](https://circleci.com/gh/clamorisse/hugo-s3-blog/tree/master.svg?style=shield&vg)](https://circleci.com/gh/clamorisse/hugo-s3-blog/tree/master)
 
 # Hugo container generated blog in AWS S3
 
