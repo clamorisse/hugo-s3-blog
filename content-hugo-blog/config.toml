@@ -5,7 +5,7 @@ theme        = "angels-ladder"
 
 [Params]
 subtitle     = "Life, art and distributed systems"
-facebook     = "https://www.facebook.com/clamorisse"
+linkedin     = "https://www.linkedin.com/in/berenicecotero"
 twitter      = "https://twitter.com/clamorisse"
 github       = "https://github.com/clamorisse"
 showsRSS     = true
