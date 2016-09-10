@@ -5,8 +5,8 @@ theme        = "angels-ladder"
 
 [Params]
 subtitle     = "Life, art and distributed systems"
-linkedin     = "https://www.linkedin.com/in/berenicecotero"
 twitter      = "https://twitter.com/clamorisse"
+facebook     = "https://www.linkedin.com/in/berenicecotero"
 github       = "https://github.com/clamorisse"
 showsRSS     = true
 copyright    = "Written by Berenice Venegas 2016"
