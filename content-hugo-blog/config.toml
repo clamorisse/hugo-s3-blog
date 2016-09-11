@@ -1,13 +1,29 @@
-baseurl      = "http://blog.cotero.org/"
-languageCode = "en-us"
-title        = "Berenice's Blog"
-theme        = "angels-ladder"
+baseurl = "http://cotero.org"
+title = "Berenice's Blog"
+theme = "hurock"
 
-[Params]
-subtitle     = "Life, art and distributed systems"
-twitter      = "https://twitter.com/clamorisse"
-facebook     = "https://www.linkedin.com/in/berenicecotero"
-github       = "https://github.com/clamorisse"
-showsRSS     = true
-copyright    = "Written by Berenice Venegas 2016"
-  
+[author]
+  name = "Berenice Venegas Cotero"
+  email = "berenice@cotero.org"
+
+  github = "clamorisse"
+  twitter = "clamorisse"
+  facebook = "clamorisse"
+#  googleplus = ""
+  linkedin = "berenicecotero"
+  gaID = "Google Analytics Tracking ID"
+
+[params]
+  Description = "Life, art and distributed systems"
+  # Optional
+  disqusShortname = ""
+  highlight_theme = "tomorrow-night"
+  notoc = true
+
+
+# Optional sections:
+[permalinks]
+  posts = "/:year/:month/:filename/"
+
+[blackfriday]
+  plainIdAnchors = true

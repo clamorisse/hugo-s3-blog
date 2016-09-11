@@ -32,7 +32,7 @@ deployment:
       - docker run -d -p 1313:1313 --name hugoprod -v $(pwd)/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.14 hugo server --baseUrl=http://blog.cotero.org/ --appendPort=false --bind=0.0.0.0
       - aws s3 sync content-hugo-blog/public/ s3://blog.cotero.org/
   staging:
-    branch: stage-tf
+    branch: hurock
     commands:
       - docker run -d -p 1313:1313 --name hugostage -v $(pwd)/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.14 hugo server --baseUrl=blog-stage.cotero.org.s3-website-us-east-1.amazonaws.com --appendPort=false --bind=0.0.0.0
       - aws s3 sync content-hugo-blog/public/ s3://blog-stage.cotero.org/
