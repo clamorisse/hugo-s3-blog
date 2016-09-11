@@ -8,13 +8,13 @@ theme = "hurock"
 
   github = "clamorisse"
   twitter = "clamorisse"
-  facebook = "clamorisse"
+  document = "clamorisse"
 #  googleplus = ""
   linkedin = "berenicecotero"
   gaID = "Google Analytics Tracking ID"
 
 [params]
-  Description = "Life, art and distributed systems"
+#  Description = "Life, art and distributed systems"
   # Optional
   disqusShortname = ""
   highlight_theme = "tomorrow-night"
