@@ -7,7 +7,7 @@ title = "C'est Moi"
 
 A physicist that once fell to the stars of Astrophysics.
 
-However, being experimentalist and theoretician at heart,  
+Being experimentalist and theoretician at heart,  
 her love eventually fell for molecular Biophysics,  
 researching the cooperative but elusive behavior of lipids  
 designed nanoliposomes for targeted drug delivery.
