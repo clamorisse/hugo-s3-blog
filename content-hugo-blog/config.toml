@@ -14,7 +14,7 @@ theme = "hurock"
   gaID = "Google Analytics Tracking ID"
 
 [params]
-#  Description = "Life, art and distributed systems"
+  Description = ""
   # Optional
   disqusShortname = ""
   highlight_theme = "tomorrow-night"
