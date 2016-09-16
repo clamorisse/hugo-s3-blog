@@ -1,5 +1,4 @@
 content-hugo-blog/*.toml-bk
-content-hugo-blog/themes/*
 content-hugo-blog/public/
 **/terraform.tfstate*
 **/.DS_Store
