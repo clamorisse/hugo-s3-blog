@@ -1,6 +1,0 @@
-[submodule "content-hugo-blog/themes/angels-ladder"]
-	path = content-hugo-blog/themes/angels-ladder
-	url = https://github.com/tanksuzuki/angels-ladder
-[submodule "content-hugo-blog/themes/hurock"]
-	path = content-hugo-blog/themes/hurock
-	url = https://github.com/titi/hurock
