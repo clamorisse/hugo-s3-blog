@@ -1,0 +1,29 @@
+baseurl = "http://cotero.org"
+title = "Berenice's Blog"
+theme = "hurock"
+
+[author]
+  name = "Berenice Venegas Cotero"
+  email = "berenice@cotero.org"
+
+  github = "clamorisse"
+  twitter = "clamorisse"
+  document = "clamorisse"
+#  googleplus = ""
+  linkedin = "berenicecotero"
+  gaID = "Google Analytics Tracking ID"
+
+[params]
+  Description = ""
+  # Optional
+  disqusShortname = ""
+  highlight_theme = "tomorrow-night"
+  notoc = true
+
+
+# Optional sections:
+[permalinks]
+  posts = "/:year/:month/:filename/"
+
+[blackfriday]
+  plainIdAnchors = true
