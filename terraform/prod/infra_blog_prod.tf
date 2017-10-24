@@ -22,6 +22,13 @@ resource "aws_s3_bucket" "blog-bucket" {
       "Principal": "*",
       "Action": "S3:GetObject",
       "Resource": "arn:aws:s3:::${var.bucket-name}/*"
+    },
+    {
+      "Sid": "AddPermissions",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "S3:ListBucket",
+      "Resource": "arn:aws:s3:::${var.bucket-name}"
     }
   ]
 }
