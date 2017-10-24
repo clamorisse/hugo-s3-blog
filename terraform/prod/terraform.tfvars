@@ -5,7 +5,7 @@
 # AWS CONFIGURATION VARIABLES
 
 aws-region           = "us-east-1"
-profile-name         = "roman-bvc-admin"
+profile-name         = "ocean-bvc"
 
 # TERRAFORM REMOTE STATE CONFIGURATION VARIABLES
 
