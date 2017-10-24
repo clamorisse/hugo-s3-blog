@@ -3,8 +3,6 @@
 #                 HOSTED IN S3
 # ----------------------------------------------
 
-
-variable "application-name"    { }
 variable "bucket-name"         { }
 variable "env"                 { }
 

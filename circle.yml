@@ -15,7 +15,7 @@ dependencies:
 
 test:
   post:
-    - docker run -d -p 1313:1313 --name hugotest -v $(pwd)/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.14 hugo server --baseUrl=http://blog.cotero.org/ --appendPort=false --watch --bind=0.0.0.0; sleep 10
+    - docker run -d -p 1313:1313 --name hugotest -v $(pwd)/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.14 hugo server --baseUrl=http://bvcblog.cotero.org/ --appendPort=false --watch --bind=0.0.0.0; sleep 10
     - docker ps -a
     - curl --retry 5 --retry-delay 5 -v http://localhost:1313
     - docker logs hugotest
@@ -27,8 +27,8 @@ deployment:
   production:
     branch: master
     commands:
-      - docker run -d -p 1313:1313 --name hugoprod -v $(pwd)/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.14 hugo server --baseUrl=http://blog.cotero.org/ --appendPort=false --bind=0.0.0.0
-      - aws s3 sync content-hugo-blog/public/ s3://blog.cotero.org/
+      - docker run -d -p 1313:1313 --name hugoprod -v $(pwd)/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.14 hugo server --baseUrl=http://bvcblog.cotero.org/ --appendPort=false --bind=0.0.0.0
+      - aws s3 sync content-hugo-blog/public/ s3://bvcblog.cotero.org/
   staging:
     branch: forestry 
     commands:

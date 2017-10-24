@@ -9,7 +9,6 @@ variable "profile-name"       { default = "default" }
 variable "tfstate-bucket"     { }
 variable "object-name"        { }
 variable "application-name"   { }
-variable "env"                { }
 
 
 # profile-name is the name of the profile to be used from file ~/.aws/credentials
