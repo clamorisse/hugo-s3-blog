@@ -14,6 +14,6 @@ object-name          = "terraform.tfstate"
 
 // app specific variables for production - be careful
 
-application-name    = "blog-cotero" 
-bucket-name         = "blog.cotero.org"
+application-name    = "bvcblog-cotero" 
+bucket-name         = "bvcblog.cotero.org"
 env                 = "prod" 
