@@ -3,6 +3,6 @@
 # ----------------------------------------
 
 tf_region      = "us-east-1"
-profile        = "ocean-bvc"
+profile        = "roman-bvc-admin"
 
-tfstate_bucket = "tfstate_bere_blog"
+tfstate_bucket = "tfstate_blog_infra"

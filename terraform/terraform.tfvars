@@ -5,7 +5,7 @@
 # AWS CONFIGURATION VARIABLES
 
 aws-region           = "us-east-1"
-profile-name         = "ocean-bvc"
+profile-name         = "roman-bvc-admin"
 object-name          = "terraform.tfstate"
 application-name     = "blog-cotero" 
 env                  = "global"

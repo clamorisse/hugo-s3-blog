@@ -5,7 +5,7 @@
 # AWS CONFIGURATION VARIABLES
 
 aws-region           = "us-east-1"
-profile-name         = "ocean-bvc"
+profile-name         = "roman-bvc-admin"
 
 # TERRAFORM REMOTE STATE CONFIGURATION VARIABLES
 
@@ -14,6 +14,6 @@ object-name          = "terraform.tfstate"
 
 // app specific variables for production - be careful
 
-application-name    = "bvcblog-cotero" 
-bucket-name         = "bvcblog.cotero.org"
+application-name    = "blog-cotero" 
+bucket-name         = "blog.cotero.org"
 env                 = "prod" 
