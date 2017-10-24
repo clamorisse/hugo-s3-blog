@@ -20,7 +20,10 @@ resource "aws_s3_bucket" "blog-bucket" {
       "Sid": "AddPerm",
       "Effect": "Allow",
       "Principal": "*",
-      "Action": "S3:GetObject",
+      "Action": [
+        "S3:GetObject",
+        "S3:PutObject"
+      ],
       "Resource": "arn:aws:s3:::${var.bucket-name}/*"
     },
     {
