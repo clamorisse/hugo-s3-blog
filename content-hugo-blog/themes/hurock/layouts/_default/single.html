@@ -20,7 +20,7 @@
   {{ .Content }}
 </div>
 
-{{ if .Site.Params.disqusShortname }}
+{{ if isset .Site.Params "disqusShortname" }}
   {{ partial "disqus.html" . }}
 {{ end }}
 
