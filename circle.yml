@@ -19,8 +19,8 @@ test:
     - docker ps -a
     - curl --retry 5 --retry-delay 5 -v http://localhost:1313
     - docker logs hugotest
-    - ls -la && pwd
-    - if [  "$(ls -A public)" ]; then echo "generated public dir"; else exit 5; fi
+    - ls -la content-hugo-blog/
+    - if [  "$(ls -A content-hugo-blog/public)" ]; then echo "generated public dir"; else exit 5; fi
     - cat $(pwd)/content-hugo-blog/public/index.html
     - docker stop hugotest
     
