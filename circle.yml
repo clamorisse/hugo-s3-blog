@@ -11,15 +11,14 @@ dependencies:
   pre:
     - sudo pip install awscli
     - docker info
-    - docker build -t clamorisse/hugo:0.30 ./docker-hugo-blog
+    - docker build -t clamorisse/hugo:0.14 ./docker-hugo-blog
 
 test:
   post:
-    - docker run -d -p 1313:1313 --name hugotest -v $(pwd)/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.30 hugo server -d public --baseUrl=http://bvcblog.cotero.org/ --appendPort=false --watch --bind=0.0.0.0; sleep 10
+    - docker run -d -p 1313:1313 --name hugotest -v $(pwd)/content-hugo-blog/:/usr/src/blog clamorisse/hugo:0.14 hugo server --baseUrl=http://bvcblog.cotero.org/ --appendPort=false --watch --bind=0.0.0.0; sleep 10
     - docker ps -a
     - curl --retry 5 --retry-delay 5 -v http://localhost:1313
     - docker logs hugotest
-    - ls -la content-hugo-blog/
     - if [  "$(ls -A content-hugo-blog/public)" ]; then echo "generated public dir"; else exit 5; fi
     - cat $(pwd)/content-hugo-blog/public/index.html
     - docker stop hugotest
