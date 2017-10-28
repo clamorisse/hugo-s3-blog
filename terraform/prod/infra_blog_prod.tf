@@ -48,4 +48,7 @@ EOF
     }
 }
 
+output "website_endpoint" {
+  value = "${var.bucket-name}.${aws_s3_bucket.blog-bucket.website_domain}"
+}
 
